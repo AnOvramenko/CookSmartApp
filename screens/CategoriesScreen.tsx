@@ -1,19 +1,10 @@
-import {
-  StyleSheet,
-  Text,
-  View,
-  FlatList,
-  ListRenderItemInfo,
-} from "react-native";
+import { FlatList, ListRenderItemInfo } from "react-native";
 import React from "react";
 import { CATEGORIES } from "../data/dummy-data";
 import CategoryGridTile from "../components/CategoryGridTile";
-import { CategoriesScreenNavigationProp } from "../types/navigation";
+// import { CategoriesScreenNavigationProp } from "../types/navigation";
 import Category from "../models/category";
-
-interface CategoriesScreenProps {
-  navigation: CategoriesScreenNavigationProp;
-}
+import { CategoriesScreenProps } from "../types/navigation";
 
 const CategoriesScreen = ({ navigation }: CategoriesScreenProps) => {
   const renderItemHandler = (categoryData: ListRenderItemInfo<Category>) => {
@@ -25,24 +16,24 @@ const CategoriesScreen = ({ navigation }: CategoriesScreenProps) => {
     };
 
     return (
-        <CategoryGridTile
-          color={categoryData.item.color}
-          title={categoryData.item.title}
-          onPress={handlePress}
-        />
-      );
+      <CategoryGridTile
+        color={categoryData.item.color}
+        title={categoryData.item.title}
+        onPress={handlePress}
+      />
+    );
   };
 
   return (
-    <FlatList
-      data={CATEGORIES}
-      renderItem={renderItemHandler}
-      keyExtractor={(item) => item.id}
-      numColumns={2}
-    />
+    <>
+      <FlatList
+        data={CATEGORIES}
+        renderItem={renderItemHandler}
+        keyExtractor={(item) => item.id}
+        numColumns={2}
+      />
+    </>
   );
 };
 
 export default CategoriesScreen;
-
-const styles = StyleSheet.create({});
