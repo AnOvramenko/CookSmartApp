@@ -24,15 +24,13 @@ CookSmart is a cross-platform mobile app built with React Native to help users d
 
 ## 📱 Screenshots
 
-<div align="center">
+<p align="center">
   <img src="assets/screenshots/startscreen.png" alt="Home Screen" width="250" style="margin: 10px;" />
   <img src="assets/screenshots/drawer.png" alt="Recipe Detail" width="250" style="margin: 10px;" />
   <img src="assets/screenshots/categoryItmes.png" alt="Shopping List" width="250" style="margin: 10px;" />
-</div>
   <img src="assets/screenshots/mealDetail.png" alt="Shopping List" width="250" style="margin: 10px;" />
-</div>
   <img src="assets/screenshots/favorites.png" alt="Shopping List" width="250" style="margin: 10px;" />
-</div>
+</p>
 
 ---
 
